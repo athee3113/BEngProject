@@ -29,7 +29,11 @@ app = FastAPI()
 # CORS settings (allow all origins for development)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Frontend URL
+    allow_origins=[
+        "http://localhost:5173", 
+        "https://individual-beng-frontend.onrender.com",  
+        "https://individual-beng.vercel.app",  
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
